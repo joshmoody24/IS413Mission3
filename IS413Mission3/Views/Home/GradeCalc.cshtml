@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>Grade Calculator</h2>
+<p>Enter grades as decimals (e.g. .87)</p>
+<form>
+    <div class="form-group">
+        <label for="assignments">Assignments</label>
+        <input class="form-control" id="assignments" placeholder="Enter Percentage (e.g. 0.74)" />
+    </div>
+
+    <div class="form-group">
+        <label for="group-project">Group Project</label>
+        <input class="form-control" id="group-project" placeholder="Enter Percentage (e.g. 0.74)" />
+    </div>
+
+    <div class="form-group">
+        <label for="quizzes">Quizzes</label>
+        <input class="form-control" id="quizzes" placeholder="Enter Percentage (e.g. 0.74)" />
+    </div>
+
+    <div class="form-group">
+        <label for="exams">Exams</label>
+        <input class="form-control" id="exams" placeholder="Enter Percentage (e.g. 0.74)" />
+    </div>
+
+    <div class="form-group">
+        <label for="intex">INTEX</label>
+        <input class="form-control" id="intex" placeholder="Enter Percentage (e.g. 0.74)" />
+    </div>
+
+    <button class="btn btn-primary mt-3" id="calculate">Calculate</button>
+</form>
+
+<h2 class="result-container">
+    Result: <span id="result"></span>
+</h2>
+
+
+<script src="js/gradeCalculator.js"></script>
