@@ -32,5 +32,6 @@ $("#calculate").click(function (e) {
     gradeTotal += $("#exams").val() * gradeWeights["exams"];
     gradeTotal += $("#intex").val() * gradeWeights["INTEX"];
     // convert answer to percentage and round answer to 2 decimal places
-    $("#result").html(Math.round((gradeTotal * 10000)) / 100 + "% (" + getLetterGrade(gradeTotal) + ")");
+    // since the page refreshes when the form is submitted, show the results in an alert box
+    alert("Your final grade is: " + Math.round((gradeTotal * 100)) / 100 + "% (" + getLetterGrade(gradeTotal) + ")");
 });

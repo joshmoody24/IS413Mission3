@@ -28,7 +28,6 @@ namespace IS413Mission3
             }
 
             app.UseStaticFiles();
-
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

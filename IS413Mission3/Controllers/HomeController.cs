@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IS413Mission3.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,14 @@ namespace IS413Mission3.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult GradeCalc()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult GradeCalc(GradeCalculator calc)
         {
             return View();
         }
