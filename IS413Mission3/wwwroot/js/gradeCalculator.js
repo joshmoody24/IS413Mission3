@@ -22,8 +22,15 @@ function getLetterGrade(grade) {
 }
 
 $("#calculate").click(function (e) {
-    // don't refresh the page when the form submits
-    e.preventDefault();
+    // validate input (this also happens on the c# model but why not do it twice?)
+    const values = [
+        $("#assignments").val(),
+        $("#group-project").val(),
+        $("#quizzes").val(),
+        $("#exams").val(),
+        $("#intex").val(),
+    ];
+    if (values.some(val => val === "" || Number(val) < 0 || Number(val) > 100)) return;
     // sum up all the grades (with weights)
     let gradeTotal = 0.0;
     gradeTotal += $("#assignments").val() * gradeWeights["assignments"];
@@ -33,5 +40,8 @@ $("#calculate").click(function (e) {
     gradeTotal += $("#intex").val() * gradeWeights["INTEX"];
     // convert answer to percentage and round answer to 2 decimal places
     // since the page refreshes when the form is submitted, show the results in an alert box
-    $("#result").html(Math.round((gradeTotal * 100)) / 100 + "% (" + getLetterGrade(gradeTotal/100) + ")");
+    result = Math.round((gradeTotal * 100)) / 100 + "% (" + getLetterGrade(gradeTotal / 100) + ")";
+    $("#result").html(result);
+    alert("Your final grade is: " + result);
+    $("#grade-form").submit();
 });

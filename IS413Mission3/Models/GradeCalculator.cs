@@ -9,18 +9,18 @@ namespace IS413Mission3.Models
     public class GradeCalculator
     {
         [Range(0,100)]
-        public byte assignments { get; set; }
+        public int assignments { get; set; }
 
         [Range(0, 100)]
-        public byte groupProject { get; set; }
+        public int groupProject { get; set; }
 
         [Range(0, 100)]
-        public byte quizzes { get; set; }
+        public int quizzes { get; set; }
 
         [Range(0, 100)]
-        public byte exams { get; set; }
+        public int exams { get; set; }
 
         [Range(0,100)]
-        public byte intex { get; set; }
+        public int intex { get; set; }
     }
 }
